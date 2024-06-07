@@ -1,6 +1,6 @@
 [settings]
 arch=avr
-build_type=Release
+build_type=Debug
 compiler=gcc
 compiler.cppstd=gnu17
 compiler.libcxx=libstdc++11
@@ -8,10 +8,10 @@ compiler.version=7
 os=baremetal
 
 [conf]
-tools.build:cflags=["-mmcu=atmega328", "-O2", "-ffunction-sections", "-fdata-sections", "-fno-exceptions", "-fno-rtti", "-flto"]
-tools.build:cxxflags=["-mmcu=atmega328", "-O2", "-ffunction-sections", "-fdata-sections", "-fno-exceptions", "-fno-rtti", "-flto"]
-tools.build:sharedlinkflags=["-Wl,--gc-sections", "-flto"]
-tools.build:exelinkflags=["-Wl,--gc-sections", "-flto"]
+tools.build:cflags=["-mmcu=atmega328", "-g3", "-ffunction-sections", "-fdata-sections", "-fno-exceptions"]
+tools.build:cxxflags=["-mmcu=atmega328", "-g3", "-ffunction-sections", "-fdata-sections", "-fno-exceptions"]
+tools.build:sharedlinkflags=["-Wl,--gc-sections"]
+tools.build:exelinkflags=["-Wl,--gc-sections"]
 
 [buildenv]
 CHOST=avr
