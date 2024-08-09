@@ -10,8 +10,8 @@ os=baremetal
 [conf]
 tools.build:cflags=["-mmcu=atmega328", "-O2", "-ffunction-sections", "-fdata-sections", "-fno-exceptions", "-fno-rtti", "-flto", "-fuse-linker-plugin", "-fno-devirtualize"]
 tools.build:cxxflags=["-mmcu=atmega328", "-O2", "-ffunction-sections", "-fdata-sections", "-fno-exceptions", "-fno-rtti", "-flto", "-fuse-linker-plugin", "-fno-devirtualize"]
-tools.build:sharedlinkflags=["-Wl,--gc-sections", "-flto"]
-tools.build:exelinkflags=["-Wl,--gc-sections", "-flto"]
+tools.build:sharedlinkflags=["-Wl,--gc-sections", "-fuse-linker-plugin", "-flto"]
+tools.build:exelinkflags=["-Wl,--gc-sections", "-fuse-linker-plugin", "-flto"]
 
 [buildenv]
 CHOST=avr
