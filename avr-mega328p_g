@@ -12,6 +12,8 @@ tools.build:cflags=["-mmcu=atmega328", "-g3", "-ffunction-sections", "-fdata-sec
 tools.build:cxxflags=["-mmcu=atmega328", "-g3", "-ffunction-sections", "-fdata-sections", "-fno-exceptions"]
 tools.build:sharedlinkflags=["-Wl,--gc-sections"]
 tools.build:exelinkflags=["-Wl,--gc-sections"]
+user.atmega_template:profile_name="avr-mega328p_g"
+
 
 [buildenv]
 CHOST=avr
