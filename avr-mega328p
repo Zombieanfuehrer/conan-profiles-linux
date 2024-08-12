@@ -12,7 +12,7 @@ tools.build:cflags=["-mmcu=atmega328", "-O2", "-ffunction-sections", "-fdata-sec
 tools.build:cxxflags=["-mmcu=atmega328", "-O2", "-ffunction-sections", "-fdata-sections", "-fno-exceptions", "-fno-rtti", "-flto", "-ffat-lto-objects"]
 tools.build:sharedlinkflags=["-Wl,--gc-sections", "-flto", "-ffat-lto-objects"]
 tools.build:exelinkflags=["-Wl,--gc-sections", "-flto", "-ffat-lto-objects"]
-user.atmega_template:profile_name="avr-mega328p"
+tools.cmake.cmaketoolchain:extra_variables={'CONAN_PROFILE_NAME': 'avr-mega328p'}
 
 [buildenv]
 CHOST=avr
